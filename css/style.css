@@ -230,41 +230,6 @@ body {
   }
 }
 
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transform: scale(1.1);
-  transition: opacity 1s ease-in-out, transform 4s ease-in-out;
-  filter: brightness(60%);
-}
-
-.slide.active {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px; /* ন্যাভবার নিচে লেখাগুলো আনবে */
-}
-
-.hero-content h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
-  text-shadow:
-    3px 3px 8px rgba(0, 0, 0, 0.6),
-    0 0 10px rgba(255, 255, 255, 0.2);
-}
-
 .slider-wrapper {
   position: absolute;
   top: 0;
