@@ -212,33 +212,31 @@ body {
 
 @media (max-width: 768px) {
   .hero-slider {
-    height: 50vh;
-    overflow: visible;
-    align-items: flex-start; /* slider-এর content ওপর থেকে শুরু হবে */
-    padding-top: 60px; /* navbar এর নিচ থেকে শুরু হবে */
+    height: 50vh; /* অর্ধেক স্ক্রিন */
+    overflow: visible; /* overflow hidden থেকে visible করলে কনটেন্ট কাটা পড়বে না */
   }
 
   .hero-content {
-    padding: 10px 15px 60px; /* নিচে বেশি padding দিলে নিচের লেখা কাটা যাবে না */
-    margin: 0 auto;
-    overflow-y: auto;
-    max-height: calc(50vh - 60px); /* navbar বাদ দিয়ে content এর জন্য জায়গা */
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 15px 20px 40px; /* নিচে বেশি প্যাডিং দিলাম যাতে বাটনের নিচের লেখা দেখা যায় */
+    margin-top: 60px; /* ন্যাভবার নিচে লেখাগুলো রাখবে */
+    max-height: 50vh; /* মোবাইলে hero-slider উচ্চতার সমান */
+    overflow-y: auto; /* যদি কনটেন্ট বেশি হয়, তাহলে স্ক্রল হবে */
+    box-sizing: border-box;
   }
 
-  @media (max-width: 768px) {
   .hero-content h2 {
-    font-size: 0.5rem;       /* আগের চেয়ে আরও ছোট */
+    font-size: 1.8rem; /* একটু বড় করা */
     line-height: 1.2;
-    margin-bottom: 8px;
-    text-shadow:
-      2px 2px 6px rgba(0, 0, 0, 0.5),
-      0 0 5px rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
   }
-}
 
   .hero-content p {
-    font-size: 0.95rem;
-    margin-bottom: 12px;
+    font-size: 1rem;
+    margin-bottom: 15px;
   }
 
   .hero-content .btn {
@@ -246,7 +244,6 @@ body {
     padding: 10px 25px;
   }
 }
-
 
 .slider-wrapper {
   position: absolute;
