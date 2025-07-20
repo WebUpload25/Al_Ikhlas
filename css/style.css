@@ -212,39 +212,58 @@ body {
 
 @media (max-width: 768px) {
   .hero-slider {
-    height: 70vh;
-    overflow: visible;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: center;
-    padding: 10px 20px 40px;
-    margin-top: 50px;
-    max-height: 50vh;
-    overflow-y: auto;
-    box-sizing: border-box;
+    height: 50vh; /* মোবাইলে অর্ধেক স্ক্রিন */
   }
 
   .hero-content h2 {
-    font-size: 1.2rem; /* মোবাইলে সুন্দরভাবে এক লাইনে আসবে */
-    line-height: 1.2;
-    margin-bottom: 10px;
+    font-size: 1.5rem; /* মোবাইলে হেডিং ছোট */
   }
 
   .hero-content p {
-    font-size: 0.95rem;
-    margin-bottom: 12px;
+    font-size: 1rem; /* মোবাইলে প্যারাগ্রাফ ছোট */
+    margin: 10px 0;
   }
 
   .hero-content .btn {
-    font-size: 1rem;
+    font-size: 1rem; /* আগের মতোই বোতামের সাইজ */
     padding: 10px 25px;
   }
 }
 
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 1s ease-in-out, transform 4s ease-in-out;
+  filter: brightness(60%);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px; /* ন্যাভবার নিচে লেখাগুলো আনবে */
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow:
+    3px 3px 8px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(255, 255, 255, 0.2);
+}
 
 .slider-wrapper {
   position: absolute;
