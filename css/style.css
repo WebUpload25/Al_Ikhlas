@@ -227,7 +227,7 @@ body {
 
   @media (max-width: 768px) {
   .hero-content h2 {
-    font-size: 1rem;       /* আগের চেয়ে আরও ছোট */
+    font-size: 0.5rem;       /* আগের চেয়ে আরও ছোট */
     line-height: 1.2;
     margin-bottom: 8px;
     text-shadow:
@@ -235,8 +235,6 @@ body {
       0 0 5px rgba(255, 255, 255, 0.2);
   }
 }
-
-
 
   .hero-content p {
     font-size: 0.95rem;
