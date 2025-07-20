@@ -212,23 +212,39 @@ body {
 
 @media (max-width: 768px) {
   .hero-slider {
-    height: 50vh; /* মোবাইলে অর্ধেক স্ক্রিন */
+    height: 50vh; /* অর্ধেক স্ক্রিন */
+    overflow: visible; /* overflow hidden থেকে visible করলে কনটেন্ট কাটা পড়বে না */
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 15px 20px 40px; /* নিচে বেশি প্যাডিং দিলাম যাতে বাটনের নিচের লেখা দেখা যায় */
+    margin-top: 60px; /* ন্যাভবার নিচে লেখাগুলো রাখবে */
+    max-height: 50vh; /* মোবাইলে hero-slider উচ্চতার সমান */
+    overflow-y: auto; /* যদি কনটেন্ট বেশি হয়, তাহলে স্ক্রল হবে */
+    box-sizing: border-box;
   }
 
   .hero-content h2 {
-    font-size: 1.5rem; /* মোবাইলে হেডিং ছোট */
+    font-size: 1.8rem; /* একটু বড় করা */
+    line-height: 1.2;
+    margin-bottom: 10px;
   }
 
   .hero-content p {
-    font-size: 1rem; /* মোবাইলে প্যারাগ্রাফ ছোট */
-    margin: 10px 0;
+    font-size: 1rem;
+    margin-bottom: 15px;
   }
 
   .hero-content .btn {
-    font-size: 1rem; /* আগের মতোই বোতামের সাইজ */
+    font-size: 1rem;
     padding: 10px 25px;
   }
 }
+
 .slider-wrapper {
   position: absolute;
   top: 0;
