@@ -216,7 +216,7 @@ body {
   }
 
   .hero-content h2 {
-    font-size: 1.5rem; /* মোবাইলে হেডিং ছোট */
+    font-size: 0.5rem; /* মোবাইলে হেডিং ছোট */
   }
 
   .hero-content p {
