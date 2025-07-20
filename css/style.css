@@ -226,10 +226,13 @@ body {
   }
 
   .hero-content h2 {
-  font-size: 1.4rem;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
+    font-size: 1.2rem; /* এক লাইনের জন্য উপযুক্ত সাইজ */
+    line-height: 1.3;
+    margin-bottom: 8px;
+    white-space: nowrap;       /* এক লাইনে রাখার জন্য */
+    overflow: hidden;
+    text-overflow: ellipsis;   /* যদি খুব বেশি বড় হয়, তাহলে কাটবে সুন্দরভাবে */
+  }
 
 
   .hero-content p {
