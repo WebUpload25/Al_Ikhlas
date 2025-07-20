@@ -212,7 +212,7 @@ body {
 
 @media (max-width: 768px) {
   .hero-slider {
-    height: 50vh;
+    height: 70vh;
     overflow: visible;
   }
 
