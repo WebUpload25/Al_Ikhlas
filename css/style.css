@@ -210,26 +210,6 @@ body {
   justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .hero-slider {
-    height: 50vh; /* মোবাইলে অর্ধেক স্ক্রিন */
-  }
-
-  .hero-content h2 {
-    font-size: 1.5rem; /* মোবাইলে হেডিং ছোট */
-  }
-
-  .hero-content p {
-    font-size: 1rem; /* মোবাইলে প্যারাগ্রাফ ছোট */
-    margin: 10px 0;
-  }
-
-  .hero-content .btn {
-    font-size: 1rem; /* আগের মতোই বোতামের সাইজ */
-    padding: 10px 25px;
-  }
-}
-
 .slider-wrapper {
   position: absolute;
   top: 0;
