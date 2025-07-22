@@ -147,11 +147,20 @@ body {
   padding: 0 1rem;
 }
 
-.hero-content h2 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+.hero-content h1 {
+  font-size: 1.5rem;  /* তোমার ইচ্ছা অনুযায়ী ছোট-বড় করো */
+  margin-bottom: 1rem;
+  color: rgb(0, 255, 225);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.1rem;  /* মোবাইল ডিভাইসে আরও ছোট */
+  }
+}
+
+
 
 .hero-content p {
   font-size: 1.3rem;
@@ -215,8 +224,8 @@ body {
     height: 50vh; /* মোবাইলে অর্ধেক স্ক্রিন */
   }
 
-  .hero-content h2 {
-    font-size: 0.5rem; /* মোবাইলে হেডিং ছোট */
+  .hero-content h3 {
+    font-size: 1rem; /* মোবাইলে হেডিং ছোট */
   }
 
   .hero-content p {
@@ -265,13 +274,17 @@ body {
   padding: 20px;
 }
 
-.hero-content h2 {
-  font-size: 3rem;
-  color: #fff;
-  font-weight: 700;
-  text-shadow:
-    3px 3px 8px rgba(0, 0, 0, 0.6),
-    0 0 10px rgba(255, 255, 255, 0.2);
+.hero-content h1 {
+  font-size: 1.5rem;  /* তোমার ইচ্ছা অনুযায়ী ছোট-বড় করো */
+  margin-bottom: 1rem;
+  color: rgb(66, 248, 233);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.1rem;  /* মোবাইল ডিভাইসে আরও ছোট */
+  }
 }
 
 
@@ -281,7 +294,7 @@ body {
 }
 
 .hero-content .btn {
-  background-color: #28a745;
+  background-color: #168831;
   color: white;
   padding: 10px 25px;
   border-radius: 6px;
