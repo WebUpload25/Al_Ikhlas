@@ -245,6 +245,7 @@ body {
   .hero-slider {
     height: 50vh;
     overflow: hidden;
+    margin-top: 60px;
   }
 
   .slider-wrapper {
