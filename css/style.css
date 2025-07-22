@@ -153,15 +153,16 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 1.5rem;
+  font-size: 2rem; /* আগের তুলনায় বড় */
   margin-bottom: 1rem;
   color: rgb(66, 248, 233);
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* নতুন যুক্ত করা হয়েছে */
 }
 
 .hero-content .btn {
@@ -171,17 +172,19 @@ body {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* নতুন */
 }
 
-/* Hero Responsive */
+
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
   }
 
   .hero-content p {
     font-size: 1rem;
     margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   }
 
   .hero-content .btn {
