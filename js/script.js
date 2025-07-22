@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(nextSlide, 4000);
 });
 const toggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
+const navLinks = document.getElementById('nav-links');
 
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
