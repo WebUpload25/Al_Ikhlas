@@ -25,7 +25,6 @@ body {
 /* =============================
    Navbar Styles
 ============================= */
-
 .navbar {
   display: flex;
   align-items: center;
@@ -33,13 +32,12 @@ body {
   background-color: #0a3d62;
   padding: 10px 30px;
   color: white;
-  position: fixed; /* sticky এর বদলে fixed */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
 }
-
 
 /* Logo */
 .logo {
@@ -56,10 +54,10 @@ body {
 }
 
 .logo img {
-  height: 50px;          /* আকার বাড়ানো হয়েছে */
-  width: 50px;           /* একই উচ্চতা ও প্রস্থ */
-  border-radius: 50%;    /* গোল করার জন্য */
-  object-fit: cover;     /* ভেতরের কনটেন্ট ঠিক রাখে */
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-right: 10px;
 }
 
@@ -93,20 +91,19 @@ body {
   font-weight: 500;
   padding: 8px 15px;
   border-radius: 5px;
-  background-color: #145DA0; /* ডিফল্ট */
+  background-color: #145DA0;
   transition: background-color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  background-color: #1ABC9C; /* হোভার করলে */
+  background-color: #1ABC9C;
 }
 
 .nav-links li a.active {
-  background-color: #069560; /* এক্টিভ ট্যাব */
+  background-color: #069560;
 }
 
-
-/* Responsive Styles */
+/* Responsive Navbar */
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -147,125 +144,6 @@ body {
   padding: 0 1rem;
 }
 
-.hero-content h1 {
-  font-size: 1.5rem;  /* তোমার ইচ্ছা অনুযায়ী ছোট-বড় করো */
-  margin-bottom: 1rem;
-  color: rgb(0, 255, 225);
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-}
-
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 1.1rem;  /* মোবাইল ডিভাইসে আরও ছোট */
-  }
-}
-
-
-
-.hero-content p {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-}
-
-.btn {
-  background-color: #00796b;
-  color: white;
-  padding: 0.7rem 1.6rem;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #004d40;
-}
-
-/* =============================
-   Image Slider
-============================= */
-.slider {
-  margin: 2rem auto;
-  max-width: 900px;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.slider-wrapper {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
-  display: none;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.slide.active {
-  display: block;
-}
-
-.hero-slider {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .hero-slider {
-    height: 50vh; /* মোবাইলে অর্ধেক স্ক্রিন */
-  }
-
-  .hero-content h3 {
-    font-size: 1rem; /* মোবাইলে হেডিং ছোট */
-  }
-
-  .hero-content p {
-    font-size: 1rem; /* মোবাইলে প্যারাগ্রাফ ছোট */
-    margin: 10px 0;
-  }
-
-  .hero-content .btn {
-    font-size: 1rem; /* আগের মতোই বোতামের সাইজ */
-    padding: 10px 25px;
-  }
-}
-
-.slider-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transform: scale(1.1); /* Slight zoom */
-  transition: opacity 1s ease-in-out, transform 4s ease-in-out;
-  filter: brightness(60%);
-}
-
-.slide.active {
-  opacity: 1;
-  transform: scale(1); /* Zoom out to normal */
-  z-index: 1;
-}
-
-
 .hero-content {
   position: relative;
   z-index: 2;
@@ -275,18 +153,11 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 1.5rem;  /* তোমার ইচ্ছা অনুযায়ী ছোট-বড় করো */
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: rgb(66, 248, 233);
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
-
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 1.1rem;  /* মোবাইল ডিভাইসে আরও ছোট */
-  }
-}
-
 
 .hero-content p {
   font-size: 1.3rem;
@@ -301,6 +172,99 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+
+/* Hero Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.1rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  .hero-content .btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+/* =============================
+   Image Slider
+============================= */
+.slider {
+  margin: 2rem auto;
+  max-width: 900px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 50vh;
+  }
+}
+
+.slider-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  min-width: 100%;
+  height: 100%;
+  display: none;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 1s ease-in-out, transform 4s ease-in-out;
+  filter: brightness(60%);
+  border-radius: 12px;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+/* =============================
+   Buttons
+============================= */
+.btn {
+  background-color: #00796b;
+  color: white;
+  padding: 0.7rem 1.6rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #004d40;
+}
+
 .our-journey {
   background-color: #b3dbd9;
   padding: 60px 20px;
