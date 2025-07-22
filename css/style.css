@@ -103,8 +103,8 @@ body {
   background-color: #069560;
 }
 
-/* Responsive Navbar */
-@media screen and (max-width: 768px) {
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
@@ -112,21 +112,23 @@ body {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #0a3d62;
-    position: absolute;
-    top: 60px;
-    right: 0;
     width: 100%;
-    text-align: right;
-    padding: 10px 20px;
+    margin-top: 10px;
   }
 
-  .nav-links.active {
+  .nav-links.show {
     display: flex;
   }
 
   .nav-links li {
-    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 12px;
+    font-size: 16px;
   }
 }
 
