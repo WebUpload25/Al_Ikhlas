@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>অনুদান | আল ইখলাস ফাউন্ডেশন</title>
+  <title>অনুদান | আল ইখলাছ ফাউন্ডেশন</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/script.js" defer></script>
 </head>
@@ -13,8 +13,8 @@
   <nav class="navbar">
     <div class="logo">
       <a href="index.html">
-        <img src="images/Al-Ikhlas - Copy.png" alt="আল ইখলাস ফাউন্ডেশন" />
-        <span>আল ইখলাস ফাউন্ডেশন</span>
+        <img src="images/Al-Ikhlas - Copy.png" alt="আল ইখলাছ ফাউন্ডেশন" />
+        <span>আল ইখলাছ ফাউন্ডেশন</span>
       </a>
     </div>
 
@@ -37,11 +37,9 @@
     <div class="container">
       <h2>আপনার সহায়তা আমাদের জন্য অনুপ্রেরণা</h2>
       <p>
-        আল ইখলাস ফাউন্ডেশন এর বিভিন্ন দাওয়া ও সমাজসেবা কার্যক্রম সফল করতে আপনার অনুদান খুবই গুরুত্বপূর্ণ। 
-        আপনার ছোট্ট সহযোগিতাই আমাদের বড় কাজ করার প্রেরণা দেয়।
-      </p>
-      
-      <form class="donate-form" action="#" method="post">
+        আল ইখলাছ ফাউন্ডেশন এর বিভিন্ন দাওয়া ও সমাজসেবা কার্যক্রম সফল করতে আপনার অনুদান খুবই গুরুত্বপূর্ণ। 
+      </p>      
+      <form class="donate-form" action="donate_submit.php" method="post">
         <div class="form-group">
           <label for="donor-name">আপনার নাম:</label>
           <input type="text" id="donor-name" name="donor-name" required placeholder="আপনার নাম লিখুন">
@@ -60,9 +58,11 @@
             <option value="Cash">নগদ (হাতে প্রদান)</option>
           </select>
         </div>
+        <div id="payment-info" class="payment-instructions" style="display:none;"></div>
         <button type="submit" class="btn-submit">অনুদান পাঠান</button>
       </form>
     </div>
+    
   </section>
 
   <!-- Footer -->
@@ -71,7 +71,7 @@
       <div class="footer-cols">
         <div>
           <h4>আমাদের সম্পর্কে</h4>
-          <p>ইখলাস ও একতা নিয়ে ইসলামিক সমাজ গঠনে আমরা বদ্ধপরিকর।</p>
+          <p>ইখলাছ ও একতা নিয়ে ইসলামিক সমাজ গঠনে আমরা বদ্ধপরিকর।</p>
         </div>
         <div>
           <h4>দ্রুত লিংক</h4>
@@ -87,7 +87,7 @@
           <p>মোবাইল: ০১৭xxxxxxxx</p>
         </div>
       </div>
-      <p class="footer-bottom">© ২০২৫ আল ইখলাস ফাউন্ডেশন - সর্বস্বত্ব সংরক্ষিত</p>
+      <p class="footer-bottom">© ২০২৫ আল ইখলাছ ফাউন্ডেশন - সর্বস্বত্ব সংরক্ষিত</p>
     </div>
   </footer>
 </body>

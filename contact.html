@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>যোগাযোগ | আল ইখলাস ফাউন্ডেশন</title>
+  <title>যোগাযোগ | আল ইখলাছ ফাউন্ডেশন</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/script.js" defer></script>
 </head>
@@ -13,8 +13,8 @@
   <nav class="navbar">
     <div class="logo">
       <a href="index.html">
-        <img src="images/Al-Ikhlas - Copy.png" alt="আল ইখলাস ফাউন্ডেশন" />
-        <span>আল ইখলাস ফাউন্ডেশন</span>
+        <img src="images/Al-Ikhlas - Copy.png" alt="আল ইখলাছ ফাউন্ডেশন" />
+        <span>আল ইখলাছ ফাউন্ডেশন</span>
       </a>
     </div>
 
@@ -36,24 +36,31 @@
   <section class="contact-section">
     <div class="container">
       <h2>আমাদের সাথে যোগাযোগ করুন</h2>
-      <form class="contact-form" action="#" method="post">
+    <form class="contact-form" action="contact_submit.php" method="post">
+
   <div class="form-group">
     <label for="name">আপনার নাম:</label>
     <input type="text" id="name" name="name" required placeholder="আপনার নাম লিখুন">
   </div>
+
   <div class="form-group">
     <label for="mobile">মোবাইল নম্বর:</label>
     <input type="tel" id="mobile" name="mobile" required placeholder="আপনার ফোন নাম্বার দিন">
   </div>
+
   <div class="form-group">
     <label for="email">ইমেইল:</label>
-    <input type="email" id="email" name="email" required placeholder="আপনার ইমেইল লিখুন">
+    <input type="email" id="email" name="email" placeholder="আপনার ইমেইল লিখুন (যদি থাকে)">
+    <!-- ⚠️ এখানে আর required নেই -->
   </div>
+
   <div class="form-group">
     <label for="message">বার্তা:</label>
     <textarea id="message" name="message" rows="5" required placeholder="আপনার বার্তা লিখুন"></textarea>
   </div>
+
   <button type="submit" class="btn-submit">পাঠান</button>
+
 </form>
 
     </div>
@@ -65,7 +72,7 @@
       <div class="footer-cols">
         <div>
           <h4>আমাদের সম্পর্কে</h4>
-          <p>ইখলাস ও একতা নিয়ে ইসলামিক সমাজ গঠনে আমরা বদ্ধপরিকর।</p>
+          <p>ইখলাছ ও একতা নিয়ে ইসলামিক সমাজ গঠনে আমরা বদ্ধপরিকর।</p>
         </div>
         <div>
           <h4>দ্রুত লিংক</h4>
@@ -81,7 +88,7 @@
           <p>মোবাইল: ০১৭xxxxxxxx</p>
         </div>
       </div>
-      <p class="footer-bottom">© ২০২৫ আল ইখলাস ফাউন্ডেশন - সর্বস্বত্ব সংরক্ষিত</p>
+      <p class="footer-bottom">© ২০২৫ আল ইখলাছ ফাউন্ডেশন - সর্বস্বত্ব সংরক্ষিত</p>
     </div>
   </footer>
 </body>

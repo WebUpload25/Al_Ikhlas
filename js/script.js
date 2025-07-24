@@ -47,3 +47,66 @@ const navLinks = document.getElementById('nav-links');
 toggle.addEventListener('click', () => {
   navLinks.classList.toggle('show');
 });
+
+//ফরম সাবমিট(যোগাযোগ ও অনুদান)
+window.onload = function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const success = urlParams.get("success");
+  const name = urlParams.get("name");
+  const from = urlParams.get("from");
+
+  if (success === "1" && name && from) {
+    const decodedName = decodeURIComponent(name);
+    let messageText = "";
+    let messageHTML = "";
+
+    if (from === "contact") {
+      messageText = `প্রিয় ${decodedName}, ধন্যবাদ! আপনার বার্তা সফলভাবে পাঠানো হয়েছে।`;
+      alert(messageText);
+
+      messageHTML = `<div style="padding:10px; background-color:#e6ffe6; border-left:5px solid green; font-size:17px; margin-bottom:10px;">
+        <strong>${decodedName}</strong>, ধন্যবাদ! আপনার বার্তা সফলভাবে পাঠানো হয়েছে! আল-ইখলাছ ফাউন্ডেশন থেকে আপনার সাথে দ্রুত যোগাযোগ করা হবে। ✅
+      </div>`;
+    } else if (from === "donation") {
+      messageText = `প্রিয় ${decodedName}, ধন্যবাদ! আপনার অনুদান সফলভাবে পাঠানো হয়েছে।`;
+      alert(messageText);
+
+      messageHTML = `<div style="padding:10px; background-color:#e6ffe6; border-left:5px solid green; font-size:17px; margin-bottom:10px;">
+        <strong>${decodedName}</strong>, ধন্যবাদ! আপনার অনুদান সফলভাবে পাঠানো হয়েছে! আল্লাহ আপনাকে উত্তম প্রাতিদান দান করুন! ✅
+      </div>`;
+    }
+
+    // HTML মেসেজ ফর্মের উপরে দেখানো
+    if (messageHTML) {
+      const form = document.querySelector("form");
+      if (form) {
+        const div = document.createElement("div");
+        div.innerHTML = messageHTML;
+        form.parentNode.insertBefore(div, form);
+      }
+    }
+
+    // URL থেকে success=name=from মুছে ফেলা
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
+
+  // পেমেন্ট মেথড অনুযায়ী তথ্য দেখানো
+  const methodSelector = document.getElementById("payment-method");
+  const infoDiv = document.getElementById("payment-info");
+
+  if (methodSelector && infoDiv) {
+    methodSelector.addEventListener("change", function () {
+      const method = this.value;
+      if (method === "bKash") {
+        infoDiv.innerHTML = "<strong>bKash নম্বর:</strong> 01311032271<br>নোট: উক্ত নাম্বারে মোবাইলে বিকাশের মাধ্যমে সেন্ড মানি করুন। সেন্ড মানি কৃত টাকার পরিমান উপরের অনুদানের ঘরে লিখে “অনুদান পাঠান “ বাটনে ক্লিক করুন!";
+      } else if (method === "Nagad") {
+        infoDiv.innerHTML = "<strong>Nagad নম্বর:</strong> 01311032271<br>নোট: উক্ত নাম্বারে মোবাইলে নগদের মাধ্যমে সেন্ড মানি করুন। সেন্ড মানি কৃত টাকার পরিমান উপরের অনুদানের ঘরে লিখে “অনুদান পাঠান “ বাটনে ক্লিক করুন!";
+      } else if (method === "Bank") {
+        infoDiv.innerHTML = "<strong>ব্যাংক তথ্য:</strong><br>অ্যাকাউন্ট: 123456789<br>ব্যাংক: ইসলামী ব্যাংক<br>ব্রাঞ্চ: ঢাকা সদর";
+      } else {
+        infoDiv.innerHTML = "সরাসরি টাকা প্রদান করতে আল-ইখলাছ ফাউন্ডেশনের কার্যালয়ে যোগাযোগ করুন। ধন্যবাদ।";
+      }
+      infoDiv.style.display = "block";
+    });
+  }
+};
